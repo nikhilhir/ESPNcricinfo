@@ -1,0 +1,68 @@
+.parent-box {
+  border: 1px solid black;
+  border-radius: 10px;
+  height: auto;
+}
+.parent-vsatack {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+.stak-spantag {
+  width: 98%;
+  display: flex;
+  margin-bottom: 20px;
+}
+.bold-span {
+  font-weight: bold;
+}
+.parent-hstack {
+  border-bottom: 1px solid black;
+}
+.child1-hstack {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.grand-child1-hstack {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  gap: 20px;
+}
+.grand-child1-hstack > img {
+  height: 20px;
+  width: 20px;
+}
+.grand-child2-hstack {
+  width: 48%;
+  display: flex;
+  justify-content: flex-end;
+}
+.child2-hstack {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.grand-child3-hstack {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.grand-child3-hstack > img {
+  width: 20px;
+  height: 20px;
+}
+.grand-child4-hstack {
+  width: 48%;
+  display: flex;
+  justify-content: flex-end;
+}
+.parent-bro-hstack {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}

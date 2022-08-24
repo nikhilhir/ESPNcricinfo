@@ -29,7 +29,8 @@ body {
 .swiper-slide {
   /* text-align: center; */
   font-size: 10px;
-  background: rgb(232, 226, 226);
+  background: #ffffff;
+  border-radius: 10px;
 }
 
 .swiper-button-next,

@@ -5,17 +5,23 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "../Components/CSS/carousal.css";
+import Card from "./Card";
+import "./CSS/carousal.css";
 // import required modules
 import { Pagination, Navigation } from "swiper";
-import Card0230 from "./Card0230";
 
 export default function Mycarousal() {
   return (
-    <div style={{ width: "100%", border: "1px solid red" }}>
+    <div
+      style={{
+        width: "100%",
+        border: "1px solid",
+        backgroundColor: "#0398dc",
+      }}
+    >
       <Swiper
         slidesPerView={4}
-        spaceBetween={20}
+        spaceBetween={15}
         slidesPerGroup={1}
         loop={false}
         loopFillGroupWithBlank={false}
@@ -27,28 +33,28 @@ export default function Mycarousal() {
         className="mySwiper"
       >
         <SwiperSlide style={{ height: "auto", width: "33%" }}>
-          <Card0230 />
+          <Card />
         </SwiperSlide>
         <SwiperSlide style={{ height: "auto", width: "33%" }}>
-          <Card0230 />
+          <Card />
         </SwiperSlide>
         <SwiperSlide style={{ height: "auto", width: "33%" }}>
-          <Card0230 />
+          <Card />
         </SwiperSlide>
         <SwiperSlide style={{ height: "auto", width: "33%" }}>
-          <Card0230 />
+          <Card />
         </SwiperSlide>
         <SwiperSlide style={{ height: "auto", width: "33%" }}>
-          <Card0230 />
+          <Card />
         </SwiperSlide>
         <SwiperSlide style={{ height: "auto", width: "33%" }}>
-          <Card0230 />
+          <Card />
         </SwiperSlide>
         <SwiperSlide style={{ height: "auto", width: "33%" }}>
-          <Card0230 />
+          <Card />
         </SwiperSlide>
         <SwiperSlide style={{ height: "auto", width: "33%" }}>
-          <Card0230 />
+          <Card />
         </SwiperSlide>
       </Swiper>
     </div>
