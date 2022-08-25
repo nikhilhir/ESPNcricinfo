@@ -1,7 +1,6 @@
-
 import "./App.css";
 import Livescore from "./Components/LiveScore/Livescore";
- import Sidebar from "./Components/Sidebar/Sidebar";
+import Sidebar from "./Components/Sidebar/Sidebar";
 
 function App() {
   return (
@@ -20,7 +19,7 @@ function App() {
           ESPN CLONE
         </a>
       </header> */}
-      <Sidebar/>
+      <Sidebar />
       {/* <Livescore/> */}
     </div>
   );
