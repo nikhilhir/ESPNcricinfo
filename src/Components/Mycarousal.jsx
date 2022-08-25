@@ -19,12 +19,6 @@ export default function Mycarousal() {
   );
 
   const liveData = data.data;
-  // if (liveData == undefined) {
-  //   console.log("erroe");
-  // }
-  // console.log("error=>", error);
-  // console.log("loading=>", loading);
-
   if (loading) {
     return (
       <div style={{ width: "100%", textAlign: "center" }}>
@@ -34,7 +28,7 @@ export default function Mycarousal() {
   }
 
   return error ? (
-    data.reason
+    <h1 id={data.id}>{data.reason}</h1>
   ) : (
     <div
       style={{
@@ -58,18 +52,32 @@ export default function Mycarousal() {
           pagination={{
             clickable: true,
           }}
+          breakpoints={{
+            240: {
+              slidesPerView: 1,
+            },
+            480: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            640: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+          }}
           navigation={true}
           modules={[Pagination, Navigation]}
           className="mySwiper"
         >
           {liveData &&
             liveData.map((info) => {
+              console.log(info.id);
               return (
                 <SwiperSlide
-                  id={info.id}
+                  key={info.id}
                   style={{ height: "auto", width: "33%" }}
                 >
-                  <Card info={info} />
+                  <Card key={info.id} info={info} />
                 </SwiperSlide>
               );
             })}
