@@ -1,6 +1,7 @@
 
 import "./App.css";
-import Sidebar from "./Components/Sidebar/Sidebar";
+import Livescore from "./Components/LiveScore/Livescore";
+ import Sidebar from "./Components/Sidebar/Sidebar";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         </a>
       </header> */}
       <Sidebar/>
+      {/* <Livescore/> */}
     </div>
   );
 }
