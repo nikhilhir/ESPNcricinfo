@@ -3,6 +3,7 @@ import Livescore from "./Components/LiveScore/Livescore";
 import Sidebar from "./Components/Sidebar/Sidebar";
 
 import MainRouter from "./Pages/MainRouter";
+import Newss from "./Components/Newss";
 
 function App() {
   return (
@@ -21,10 +22,11 @@ function App() {
           ESPN CLONE
         </a>
       </header> */}
-      <Sidebar />
+      <Newss/>
+      {/* <Sidebar /> */}
       {/* <Livescore/> */}
 
-      <MainRouter />
+      {/* <MainRouter /> */}
     </div>
   );
 }
