@@ -16,10 +16,11 @@ const Newss = () => {
     gap: "20px",
     marginTop: "1px",
     padding:"2px",
+    width:"63%",
    }}>
 
     <div className="innerContainer" style={{
-        padding: "10px",
+        padding: "2px",
          /* booooooooooooooooorrrrrrrrrrDDDDeerrrrrrrrrrrrrrrrrrrrrrr */
         border:"1px solid blue",
     }}>
@@ -51,7 +52,8 @@ const Newss = () => {
              boxShadow:
                "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px",
                 /* booooooooooooooooorrrrrrrrrrDDDDeerrrrrrrrrrrrrrrrrrrrrrr */
-                border:"1px solid teal",
+                // border:"1px solid teal",
+                marginTop:"-15px"
            }}
          >
            {" "}
@@ -154,6 +156,7 @@ const Newss = () => {
        <h6
          style={{
            marginLeft: "20px",
+           marginTop:"10px"
          }}
        >
          2ND MEN'S TEST, OLD TRAFFORD
