@@ -16,7 +16,7 @@ const News = () => {
     console.log(news)
   return (
     
-      <>
+      <div style={{backgroundColor:"rgb(236, 236, 236)"}}>
       
         <Image padding="10px" margin="auto" src="https://tpc.googlesyndication.com/simgad/16233217720762028300?"/>
       
@@ -82,7 +82,7 @@ const News = () => {
         </Box>
       </Stack>
     </Box>
-      </>
+      </div>
     
   )
 }
