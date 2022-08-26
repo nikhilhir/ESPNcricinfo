@@ -2,6 +2,8 @@ import "./App.css";
 import Livescore from "./Components/LiveScore/Livescore";
 // import Sidebar from "./Components/Sidebar/Sidebar";
 
+// import MainRouter from "./Pages/MainRouter";
+
 function App() {
   return (
     <div className="App">
@@ -19,8 +21,11 @@ function App() {
           ESPN CLONE
         </a>
       </header> */}
-      {/* <Sidebar /> */}
-      <Livescore/>
+
+       <Livescore/> 
+
+      {/* <MainRouter /> */}
+
     </div>
   );
 }
