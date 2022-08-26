@@ -10,11 +10,11 @@ import { FiArrowRightCircle } from 'react-icons/fi';
 
 const Upcomming = () => {
 
-  // const API = "db055fd0-6974-4232-bb32-933ff430ef70";
-  const API = "dhgfhjdsgfsgf"
+  //  const API = "db055fd0-6974-4232-bb32-933ff430ef70";
+   const API2 = "db055fd0-6974-4232-bb32-933ff430ef70";
 
   const { data } = useFetch(
-    `https://api.cricapi.com/v1/series?apikey=${API}`
+    `https://api.cricapi.com/v1/series?apikey=${API2}`
     //https://api.cricapi.com/v1/series?apikey=${API}
   );
   const matchdata = data.data;
@@ -26,14 +26,14 @@ const Upcomming = () => {
 
   const dispatch = useDispatch();
   const [serchParams, setSearchParams] = useSearchParams();
-  const urlcategory = serchParams.getAll("category");
-  const [category, setCategory] = useState(urlcategory || []);
+  const urlcategory = serchParams.getAll("name");
+  const [name, setCategory] = useState(urlcategory || []);
 
 
    const handleClick = (e) => {
      const option = e.target.value;
-     let newcategory = [...category];
-     if (category.includes(option)) {
+     let newcategory = [...name];
+     if (name.includes(option)) {
        newcategory.splice(newcategory.indexOf(option), 1);
      } else {
        newcategory.push(option);
@@ -43,11 +43,11 @@ const Upcomming = () => {
    };
 
    useEffect(() => {
-     if (category) {
-       setSearchParams({ category });
+     if (name) {
+       setSearchParams({ name });
        //setSearchParams({category:categoryvalue},{replace:true})
      }
-   }, [category, setSearchParams, dispatch]);
+   }, [name, setSearchParams, dispatch]);
 
 
 
@@ -59,7 +59,7 @@ const Upcomming = () => {
           <button
             onClick={handleClick}
             value="T20"
-            defaultChecked={category.includes("T20")}
+            defaultChecked={name.includes("T20")}
           >
             T20
           </button>
@@ -68,7 +68,7 @@ const Upcomming = () => {
           <button
             onClick={handleClick}
             value="Test"
-            defaultChecked={category.includes("test")}
+            defaultChecked={name.includes("test")}
           >
             Test
           </button>
@@ -77,7 +77,7 @@ const Upcomming = () => {
           <button
             onClick={handleClick}
             value="Domestic"
-            defaultChecked={category.includes("Domestic")}
+            defaultChecked={name.includes("Domestic")}
           >
             Domestic
           </button>
@@ -86,7 +86,7 @@ const Upcomming = () => {
           <button
             onClick={handleClick}
             value="Youth"
-            defaultChecked={category.includes("Youth")}
+            defaultChecked={name.includes("Youth")}
           >
             Youth
           </button>
@@ -95,7 +95,7 @@ const Upcomming = () => {
           <button
             onClick={handleClick}
             value="Fc"
-            defaultChecked={category.includes("FC")}
+            defaultChecked={name.includes("FC")}
           >
             FC
           </button>
