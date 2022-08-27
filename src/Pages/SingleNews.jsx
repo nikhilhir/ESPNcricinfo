@@ -1,3 +1,11 @@
+// <<<<<<< HEAD
+// import React, { useEffect, useState } from 'react'
+// import {Link, useParams} from 'react-router-dom'
+// import {useSelector,useDispatch} from 'react-redux'
+// import { news_data} from '../Redux/action'
+// import {Box,Text,Image, Stack, Grid,GridItem, Spacer} from "@chakra-ui/react"
+// import Footer from '../Components/Footer'
+// =======
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
@@ -11,6 +19,8 @@ import {
   GridItem,
   Spacer,
 } from "@chakra-ui/react";
+import Footer from "../Components/Footer";
+
 
 const SingleNews = () => {
   const { id } = useParams();
@@ -38,6 +48,8 @@ const SingleNews = () => {
   // console.log(data,"hello")
 
   return (
+
+   
     <div style={{ backgroundColor: "rgb(236, 236, 236)" }}>
       <Image
         padding="10px"
@@ -80,6 +92,7 @@ const SingleNews = () => {
               <Image src="https://tpc.googlesyndication.com/simgad/1350654057507125249?" />
               <Spacer h="3" />
               <Image src="https://secure-ds.serving-sys.com/resources/PROD/asset/144375/IMAGE/20220809/Rbi_ENG_2_300x250_8aug22_72879983665627947.jpg" />
+
             </Box>
             <Box
               bg="white"
@@ -227,7 +240,12 @@ const SingleNews = () => {
             </Box>
           </Stack>
         </Box>
-      </Box>
+
+    </Box>
+    <Footer/>
+
+     
+
     </div>
   );
 };
