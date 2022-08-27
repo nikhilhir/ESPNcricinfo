@@ -22,8 +22,10 @@ import {
 } from "react-icons/bs";
 import Example from "./NavbarItems/Edition";
 import Edition from "./NavbarItems/Edition";
+
 import { FaSearch, FaArrowRight } from "react-icons/fa";
 import "../CSS/input0230.css";
+
 const NavbarComponent = () => {
   const NAV_ITEMS = [
     {
@@ -339,3 +341,7 @@ const NavbarComponent = () => {
 };
 
 export default NavbarComponent;
+
+
+
+
