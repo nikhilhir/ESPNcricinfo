@@ -11,7 +11,7 @@
   
     width: 96%;
     border-radius: 15px;
-    margin-top: 25px;
+    margin-top: 10px;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     font-family: "Poppins", sans-serif;
@@ -27,8 +27,9 @@
     position: relative;
     margin: auto;
     border-radius: 15px;
+    margin-top: -15px;
     /* bordddddddddddddddddddddddderrrrrrrrrrrrrrrrrr */
-    border: 1px solid magenta;
+    border: 3px solid magenta;
   }
   
   .article {
@@ -73,6 +74,8 @@
     overflow: hidden;
     position: relative;
     border-radius: 15px;
+    border: 2px solid navy;
+    margin-top: 25px;
   }
   
   .a {
@@ -157,6 +160,8 @@
     transition: all 1s;
     border-radius: 15px;
     text-align: center;
+    border: 1px solid black;
+    
   }
   
   .pant:hover {
@@ -178,6 +183,7 @@
     background-repeat: no-repeat;
     transition: all 1s;
     border-radius: 15px;
+    border: 1px solid palevioletred;
   }
   
   .bwi:hover {

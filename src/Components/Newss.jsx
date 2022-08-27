@@ -138,7 +138,7 @@ const Newss = () => {
            </div>
 
            <div className={styles.h5}>
-             Posers for India:The same old top three?Pant or Karthik, or both?
+             Posers for India:The same old top three?
            </div>
            <div className={styles.h5}>Big battels:Mushfiqur vs Hardik, take two?</div>
            <div className={styles.h5}>
@@ -164,10 +164,10 @@ const Newss = () => {
        <a href="https://www.espncricinfo.com/video/politeenquiries-did-bazball-take-a-summer-break-last-week-1330601">
          <div className={styles.container}>
            <div className={styles.pant}>
-             <img
+             {/* <img
                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR127rwchtsq64FhlcpiVeASOl8MstTeYrQZg&usqp=CAU"
                alt=""
-             />
+             /> */}
            </div>
          </div>
        </a>
@@ -179,8 +179,8 @@ const Newss = () => {
        </a>
        <h6
          style={{
-           marginLeft: "70px",
-           marginTop: "-1px",
+           marginLeft: "59px",
+           marginTop: "-3px",
          }}
        >
          1ST TEST, ANTIGUA
@@ -188,8 +188,8 @@ const Newss = () => {
        <h3
          style={{
            color: "red",
-           marginLeft: "50px",
-           marginTop: "-15px",
+           marginLeft: "38px",
+           marginTop: "-7px",
          }}
        >
          <li>LIVE</li>
@@ -204,11 +204,12 @@ const Newss = () => {
          {" "}
          <div
            style={{
-             height: "150px",
+             height: "128px",
              width: "300px",
              borderRadius: "15px",
              boxShadow:
                "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px",
+               marginTop:"-3px",
            }}
          >
            {" "}
@@ -216,7 +217,7 @@ const Newss = () => {
              {" "}
              <img
                style={{
-                 height: "30px",
+                 height: "25px",
                  width: "50px",
                }}
                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Flag_of_Bangladesh.svg/800px-Flag_of_Bangladesh.svg.png"
@@ -226,23 +227,25 @@ const Newss = () => {
            </div>
            <div
              style={{
-               marginTop: "20px",
+               marginTop: "1px",
              }}
            >
              {" "}
              <img
                style={{
-                 height: "30px",
+                 height: "25px",
                  width: "50px",
                }}
-               src="data:image/png;base64,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"
+               src="https://www.sportzcraazy.com/wp-content/uploads/2020/11/west-indies-cricket-team-logo.jpg"
                alt=""
              />
              {"      "}
              WEST INDIES <span>{"(Yet to bat)"}</span>{" "}
              <h6
                style={{
-                 marginLeft: "50px",
+                //  marginLeft: "30px",
+                fontSize:"13px",
+                 textAlign:"left"
                }}
              >
                Day 1-Session 1: West Indies Choose to Field
@@ -256,7 +259,7 @@ const Newss = () => {
        </div>{" "}
        <h2
          style={{
-           marginLeft: "60px",
+          //  marginLeft: "60px",
            
            textAlign:"center",
            
@@ -265,22 +268,31 @@ const Newss = () => {
          Bangladesh look to abandon horrors of 2022 vs WI
        </h2>{" "}
        <hr />
+       {/* ............small img and text............... */}
        <div
          style={{
            display: "flex",
            justifyContent: "space-evenly",
+           width:"95%",
+           marginLeft:"11px"
+           
+          //  border:"border 2px solid black"
+           
            
          }}
        >
          <div className={styles.div}>
+          {/* w 200px */}
            <div className={styles.ban}></div>
+           {/* w 100% */}
          </div>
 
          <div
            style={{
-             width: "500px",
-             marginLeft: "20px",
-             marginTop: "20px",
+             width: "400px",
+             marginLeft: "5px",
+             marginTop: "30px",
+             border:"1px solid magenta"
              
             
            }}
@@ -292,6 +304,7 @@ const Newss = () => {
          </div>
        </div>
        <hr />
+       {/* seprate part */}
        <a href="">
          <span className={styles.span}>{">"}</span>Fit-again Roach added to WI
          squad
@@ -306,14 +319,14 @@ const Newss = () => {
          </a>
        </div>
      </div>
-
+{/* newwwwwwwwwwwwwwwwwwwwwwwwwwwww */}
      <div className={styles.first}>
        <a href="">
          <span className={styles.span}></span>IPL MEDIA RIGHTS
        </a>
        <h6
          style={{
-           marginLeft: "70px",
+           marginLeft: "50px",
            marginTop: "-1px",
          }}
        >
