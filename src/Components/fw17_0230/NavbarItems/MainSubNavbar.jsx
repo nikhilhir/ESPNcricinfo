@@ -15,6 +15,7 @@ const MainSubNavbar = ({ NAV_ITEMS }) => {
   return (
     <Stack direction={"row"} spacing={4}>
       {NAV_ITEMS.map((navITEMS) => {
+        console.log("=>", navITEMS);
         return (
           <Box key={navITEMS.label}>
             <Popover trigger={"hover"} placement={"bottom-start"}>
