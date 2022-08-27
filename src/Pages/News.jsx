@@ -2,6 +2,7 @@ import { Box ,Stack,Text,Image,Center, Spacer} from '@chakra-ui/react'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import Footer from '../Components/Footer'
 import { news_data } from '../Redux/action'
 
 const News = () => {
@@ -16,11 +17,11 @@ const News = () => {
     console.log(news)
   return (
     
-      <div style={{backgroundColor:"rgb(236, 236, 236)"}}>
+      <div style={{backgroundColor:"rgb(247, 248, 248)"}}>
       
         <Image padding="10px" margin="auto" src="https://tpc.googlesyndication.com/simgad/16233217720762028300?"/>
       
-        <Box marginLeft="10%">
+        <Box marginLeft="10%" marginBottom="10px">
       <Stack direction="row" gap="10px">
         <Box w="65%"  borderWidth="1px" borderRadius='10px' bg="white">
           <Text paddingLeft="15px" paddingBottom="20px"  paddingTop="15px"><Text fontSize="30px" as='b'>Latest News</Text></Text>
@@ -71,7 +72,7 @@ const News = () => {
             </Box>
           })}
         </Box>
-        <Box>
+        <Box position="sticky" top="0">
         <Spacer h="3"/>
           <Image src="https://tpc.googlesyndication.com/simgad/2618765116939835931?"/>
           <Spacer h="5"/>
@@ -82,6 +83,7 @@ const News = () => {
         </Box>
       </Stack>
     </Box>
+    <Footer/>
       </div>
     
   )

@@ -3,6 +3,7 @@ import {Link, useParams} from 'react-router-dom'
 import {useSelector,useDispatch} from 'react-redux'
 import { news_data} from '../Redux/action'
 import {Box,Text,Image, Stack, Grid,GridItem, Spacer} from "@chakra-ui/react"
+import Footer from '../Components/Footer'
 
 const SingleNews = () => {
     const {id} = useParams()
@@ -32,12 +33,12 @@ if(currNews.full_desciption!==undefined)
 // console.log(data,"hello")
   
   return (
-    <div style={{backgroundColor:"rgb(236, 236, 236)"}}>
+    <div style={{backgroundColor:"rgb(247, 248, 248)"}}>
      <Image padding="10px" margin="auto" src="https://tpc.googlesyndication.com/simgad/16233217720762028300?"/>
-      <Box marginLeft="10%">
+      <Box marginLeft="10%" marginBottom="10px">
         <Box >
         <Stack direction="row">
-        <Box w="23%" h="800px" bg="white" borderRadius="10px" >
+        <Box w="23%" h="800px" bg="white" borderRadius="10px" position="sticky" top="0">
              <Box  padding="15px 0px 15px 0px">
              {
               news.slice(9,10).map((e)=>{
@@ -142,6 +143,7 @@ if(currNews.full_desciption!==undefined)
         </Stack>
         </Box>
     </Box>
+    <Footer/>
     </div>
   )
 }
