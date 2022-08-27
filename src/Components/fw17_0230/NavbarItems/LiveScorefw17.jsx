@@ -13,7 +13,7 @@ const LiveScorefw17 = () => {
   const liveScore = [
     {
       label: "Live Score Home",
-      href: "#",
+      href: "/livescore",
     },
     {
       label: "Week view",

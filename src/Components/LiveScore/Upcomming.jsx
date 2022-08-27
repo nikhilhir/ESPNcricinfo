@@ -1,59 +1,50 @@
-import React from 'react'
-import styles from  "./Upcoming.module.css"
+import React from "react";
+import styles from "./Upcoming.module.css";
 
 import { useEffect } from "react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useLocation, useSearchParams } from "react-router-dom";
-import useFetch from '../../Hooks/useFetch';
-import RightSide from './RightSide';
-import { BsWatch } from 'react-icons/bs';
+import useFetch from "../../Hooks/useFetch";
+import RightSide from "./RightSide";
+import { BsWatch } from "react-icons/bs";
 
 const Upcomming = () => {
-   //const location = useLocation();
+  //const location = useLocation();
 
-   const API = "db055fd0-6974-4232-bb32-933ff430ef70";
-   //const API2 = "db055fd0-6974-4232-bb32-933ff430ef70";
+  const API = "db055fd0-6974-4232-bb32-933ff430ef70";
+  //const API2 = "db055fd0-6974-4232-bb32-933ff430ef70";
 
   const { data } = useFetch(
     `https://api.cricapi.com/v1/series?apikey=${API}`
     //https://api.cricapi.com/v1/series?apikey=${API}
   );
   const matchdata = data.data;
-  console.log("matchdata", matchdata);
-
-
-
-
 
   const dispatch = useDispatch();
   const [serchParams, setSearchParams] = useSearchParams();
   const urlcategory = serchParams.getAll("name");
   const [name, setCategory] = useState(urlcategory || []);
 
+  const handleClick = (e) => {
+    const option = e.target.value;
+    let newcategory = [...name];
+    if (name.includes(option)) {
+      newcategory.splice(newcategory.indexOf(option), 1);
+    } else {
+      newcategory.push(option);
+    }
+    setCategory(newcategory);
+  };
 
-   const handleClick = (e) => {
-    
-   
-     const option = e.target.value;
-     let newcategory = [...name];
-     if (name.includes(option)) {
-       newcategory.splice(newcategory.indexOf(option), 1);
-     } else {
-       newcategory.push(option);
-     }
-     setCategory(newcategory);
-     console.log(newcategory);
-   };
+  useEffect(() => {
+    if (name) {
+      setSearchParams({ name });
+      //setSearchParams({category:categoryvalue},{replace:true})
+    }
+  }, [name, setSearchParams, dispatch]);
 
-   useEffect(() => {
-     if (name) {
-       setSearchParams({ name });
-       //setSearchParams({category:categoryvalue},{replace:true})
-     }
-   }, [name, setSearchParams, dispatch]);
-
-// ****************************day5***********************
+  // ****************************day5***********************
   //  useEffect(()=>{
   //   let getwatchParams;
   //   if(location.serch || matchdata.length===0){
@@ -66,9 +57,7 @@ const Upcomming = () => {
   //   }
   //   dispatch( matchdata(getwatchParams))
   //  },[])
-// ***************************************************
-
-
+  // ***************************************************
 
   return (
     <>
@@ -120,14 +109,14 @@ const Upcomming = () => {
         </div>
       </div>
       {/* ********************************************* */}
-      <div style={{ display: "flex" ,justifyContent:"space-around"}}>
+      <div style={{ display: "flex", justifyContent: "space-around" }}>
         <div>
           {matchdata &&
             matchdata.map((elem) => {
               //console.log(info.id);
               return (
                 <>
-                  <div style={{ border: "" , marginLeft:"150px"}}>
+                  <div style={{ border: "", marginLeft: "150px" }}>
                     <div className={styles.upcom}>
                       <div className={styles.contai}>
                         <div
@@ -221,6 +210,6 @@ const Upcomming = () => {
       {/* ********************************************************* */}
     </>
   );
-}
+};
 
-export default Upcomming
+export default Upcomming;

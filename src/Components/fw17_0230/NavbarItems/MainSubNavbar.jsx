@@ -5,9 +5,9 @@ import {
   PopoverContent,
   PopoverTrigger,
   Stack,
+  Link,
 } from "@chakra-ui/react";
 import React from "react";
-import { Link } from "react-router-dom";
 import LiveScorefw17 from "./LiveScorefw17";
 import SubNavbar from "./SubNavbar";
 
@@ -15,13 +15,13 @@ const MainSubNavbar = ({ NAV_ITEMS }) => {
   return (
     <Stack direction={"row"} spacing={4}>
       {NAV_ITEMS.map((navITEMS) => {
-        console.log("=>", navITEMS);
         return (
           <Box key={navITEMS.label}>
             <Popover trigger={"hover"} placement={"bottom-start"}>
               <PopoverTrigger>
                 <Box style={{ color: "white" }}>{navITEMS.label}</Box>
               </PopoverTrigger>
+
               {navITEMS.children && (
                 <PopoverContent
                   border={0}

@@ -25,16 +25,17 @@ import Edition from "./NavbarItems/Edition";
 
 import { FaSearch, FaArrowRight } from "react-icons/fa";
 import "../CSS/input0230.css";
+import { Link, useNavigate } from "react-router-dom";
 
 const NavbarComponent = () => {
   const NAV_ITEMS = [
     {
       label: "Live Score",
-      href: "#",
+      href: "https://www.espncricinfo.com/video/can-virat-kohli-make-it-count-at-the-asia-cup-1330324",
       children: [
         {
           label: "Live Scores Home",
-          href: "#",
+          href: "/livescore",
         },
         {
           label: "Week view",
@@ -124,7 +125,7 @@ const NavbarComponent = () => {
       children: [
         {
           label: "News Home",
-          href: "#",
+          href: "/news",
         },
         {
           label: "Feature of ODI",
@@ -240,15 +241,17 @@ const NavbarComponent = () => {
   };
 
   const ref = useRef();
+  const navigate = useNavigate();
 
   return (
     <Navbar variant="dark" sticky="top" style={{ backgroundColor: "#03a9f4" }}>
       <Container style={{ marginLeft: "10px" }}>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <img
             src="https://wassets.hscicdn.com/static/images/logo.png"
             alt="espn logo"
             style={{ width: "138px", height: "20px" }}
+            onClick={() => navigate("/newss")}
           />
         </Navbar.Brand>
         <Nav className="me-auto" style={{ display: "flex", gap: "130px" }}>
@@ -341,7 +344,3 @@ const NavbarComponent = () => {
 };
 
 export default NavbarComponent;
-
-
-
-

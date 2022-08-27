@@ -1,7 +1,9 @@
 import { Box, Link, Stack, Text } from "@chakra-ui/react";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const SubNavbar = ({ label, href }) => {
+  const navigate = useNavigate();
   return (
     <Link
       href={"#"}
@@ -32,6 +34,7 @@ const SubNavbar = ({ label, href }) => {
             _groupHover={{ color: "#006cb7" }}
             fontWeight={500}
             color="blackAlpha.700"
+            onClick={() => navigate(href)}
           >
             {label}
           </Text>

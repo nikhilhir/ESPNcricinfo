@@ -1,5 +1,4 @@
-
-import React from 'react'
+import React from "react";
 // *****************************************
 import { useEffect } from "react";
 import { useState } from "react";
@@ -7,45 +6,36 @@ import { useDispatch } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 
 // *********************************************************
-import { FiArrowRightCircle } from 'react-icons/fi';
-import  styles from "./Live.module.css"
-    //{info}
+import { FiArrowRightCircle } from "react-icons/fi";
+import styles from "./Live.module.css";
+//{info}
 const Live = () => {
- // console.log("live",info)
-   const dispatch = useDispatch();
-   const [serchParams, setSearchParams] = useSearchParams();
-   const urlcategory = serchParams.getAll("category");
-   const [category, setCategory] = useState(urlcategory || []);
+  const dispatch = useDispatch();
+  const [serchParams, setSearchParams] = useSearchParams();
+  const urlcategory = serchParams.getAll("category");
+  const [category, setCategory] = useState(urlcategory || []);
 
+  //  ********************************************************
+  const handleClick = (e) => {
+    const option = e.target.value;
+    let newcategory = [...category];
+    if (category.includes(option)) {
+      newcategory.splice(newcategory.indexOf(option), 1);
+    } else {
+      newcategory.push(option);
+    }
+    setCategory(newcategory);
+  };
 
-//  ********************************************************
- const handleClick = (e) => {
-   const option = e.target.value;
-   let newcategory = [...category];
-   if (category.includes(option)) {
-     newcategory.splice(newcategory.indexOf(option), 1);
-   } else {
-     newcategory.push(option);
-   }
-   setCategory(newcategory);
-   console.log(newcategory);
- };
+  useEffect(() => {
+    if (category) {
+      setSearchParams({ category });
+      //setSearchParams({category:categoryvalue},{replace:true})
+    }
+  }, [category, setSearchParams, dispatch]);
 
- useEffect(() => {
-   if (category) {
-     setSearchParams({ category });
-     //setSearchParams({category:categoryvalue},{replace:true})
-   
-   }
- }, [category, setSearchParams, dispatch]);
+  // ****************************************************************
 
-
-
-
-// ****************************************************************
-
-
- 
   return (
     <>
       <h1 style={{ color: "red" }}>live </h1>
@@ -648,12 +638,6 @@ const Live = () => {
       {/* ********************************************************************* */}
     </>
   );
-}
+};
 
-export default Live
-
-
-
-
-
-     
+export default Live;
