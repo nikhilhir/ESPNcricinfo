@@ -30,6 +30,10 @@
     color: skyblue;
     border-bottom: 5px solid skyblue !important;
 }
+ button:hover {
+     background-color: aqua;
+     cursor: pointer;
+ }
 
 .main {
     width: 100%;

@@ -1,32 +1,31 @@
-import "./App.css";
+
+
+import NavbarComponent from "./Components/fw17_0230/NavbarComponent";
 import Livescore from "./Components/LiveScore/Livescore";
-import Sidebar from "./Components/Sidebar/Sidebar";
+
+import Mycarousal from "./Components/Mycarousal";
 
 import MainRouter from "./Pages/MainRouter";
 import Newss from "./Components/Newss";
 
+
 function App() {
   return (
     <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          ESPN CLONE
-        </a>
-      </header> */}
-      <Newss/>
-      {/* <Sidebar /> */}
-      {/* <Livescore/> */}
 
-      {/* <MainRouter /> */}
+      <Newss/>
+     
+
+      <Mycarousal />
+      <NavbarComponent />
+     
+
+       <Livescore/> 
+
+       <MainRouter /> 
+
+
+
     </div>
   );
 }
