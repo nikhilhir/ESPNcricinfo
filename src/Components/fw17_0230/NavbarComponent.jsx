@@ -11,11 +11,12 @@ import {
 } from "react-icons/bs";
 import Example from "./NavbarItems/Edition";
 import Edition from "./NavbarItems/Edition";
+import Livescore from "../LiveScore/Livescore";
 const NavbarComponent = () => {
   const NAV_ITEMS = [
     {
       label: "Live Score",
-      href: "/jobrecomandation",
+      href: "#",
       children: [
         {
           label: "Live Scores Home",
@@ -253,3 +254,7 @@ const NavbarComponent = () => {
 };
 
 export default NavbarComponent;
+
+
+
+

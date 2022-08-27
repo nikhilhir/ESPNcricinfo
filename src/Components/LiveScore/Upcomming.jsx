@@ -4,17 +4,19 @@ import styles from  "./Upcoming.module.css"
 import { useEffect } from "react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { useSearchParams } from "react-router-dom";
+import { useLocation, useSearchParams } from "react-router-dom";
 import useFetch from '../../Hooks/useFetch';
-import { FiArrowRightCircle } from 'react-icons/fi';
+import RightSide from './RightSide';
+import { BsWatch } from 'react-icons/bs';
 
 const Upcomming = () => {
+   //const location = useLocation();
 
-  //  const API = "db055fd0-6974-4232-bb32-933ff430ef70";
-   const API2 = "db055fd0-6974-4232-bb32-933ff430ef70";
+   const API = "db055fd0-6974-4232-bb32-933ff430ef70";
+   //const API2 = "db055fd0-6974-4232-bb32-933ff430ef70";
 
   const { data } = useFetch(
-    `https://api.cricapi.com/v1/series?apikey=${API2}`
+    `https://api.cricapi.com/v1/series?apikey=${API}`
     //https://api.cricapi.com/v1/series?apikey=${API}
   );
   const matchdata = data.data;
@@ -31,6 +33,8 @@ const Upcomming = () => {
 
 
    const handleClick = (e) => {
+    
+   
      const option = e.target.value;
      let newcategory = [...name];
      if (name.includes(option)) {
@@ -49,6 +53,20 @@ const Upcomming = () => {
      }
    }, [name, setSearchParams, dispatch]);
 
+// ****************************day5***********************
+  //  useEffect(()=>{
+  //   let getwatchParams;
+  //   if(location.serch || matchdata.length===0){
+
+  //     getwatchParams={
+  //       params:{
+  //         name:serchParams.getAll("name")
+  //       }
+  //     }
+  //   }
+  //   dispatch( matchdata(getwatchParams))
+  //  },[])
+// ***************************************************
 
 
 
@@ -58,10 +76,10 @@ const Upcomming = () => {
         <div>
           <button
             onClick={handleClick}
-            value="T20"
-            defaultChecked={name.includes("T20")}
+            value="SriLanka"
+            defaultChecked={name.includes("SriLanka")}
           >
-            T20
+            ShriLanka
           </button>
         </div>
         <div>
@@ -102,44 +120,53 @@ const Upcomming = () => {
         </div>
       </div>
       {/* ********************************************* */}
-      <div style={{display:""}}>
-        {matchdata &&
-          matchdata.map((elem) => {
-            //console.log(info.id);
-            return (
-              <>
-                <div style={{border:"1px solid"}}>
-                  <div className={styles.upcom}>
-                    <div className={styles.contai}>
-                      <div
-                        style={{ color: "rgb(87, 82, 82)", fontWeight: "700" }}
-                      >
-                        {elem.startDate}
+      <div style={{ display: "flex" ,justifyContent:"space-around"}}>
+        <div>
+          {matchdata &&
+            matchdata.map((elem) => {
+              //console.log(info.id);
+              return (
+                <>
+                  <div style={{ border: "" , marginLeft:"150px"}}>
+                    <div className={styles.upcom}>
+                      <div className={styles.contai}>
+                        <div
+                          style={{
+                            color: "rgb(87, 82, 82)",
+                            fontWeight: "700",
+                          }}
+                        >
+                          {elem.startDate}
+                        </div>
+                        <div style={{ color: "black", fontWeight: "900" }}>
+                          {elem.name}
+                        </div>
+                        <div
+                          style={{
+                            color: "rgb(87, 82, 82)",
+                            fontWeight: "700",
+                          }}
+                        >
+                          {elem.endDate}
+                        </div>
                       </div>
-                      <div style={{ color: "black", fontWeight: "900" }}>
-                        {elem.name}
-                      </div>
-                      <div
-                        style={{ color: "rgb(87, 82, 82)", fontWeight: "700" }}
-                      >
-                        {elem.endDate}
-                      </div>
-                    </div>
 
-                    <hr />
+                      <hr />
+                    </div>
                   </div>
-                </div>
-              </>
-            );
-          })}
+                </>
+              );
+            })}
+        </div>
+        <RightSide />
 
         {/* ******************************************************** */}
-        <div className={styles.adds_box} style={{ marginTop: "0px" }}>
+        {/* <div className={styles.adds_box} style={{ marginTop: "0px" }}>
           <div>
             <div>
-              <b>Quike Links</b>
-              {/* ************************************************** */}
-              <div>
+              <b>Quike Links</b> */}
+        {/* ************************************************** */}
+        {/* <div>
                 <a className="active" href="#home">
                   <div className={styles.filter}>
                     <p style={{ color: "blue", size: 70 }}>
@@ -160,9 +187,9 @@ const Upcomming = () => {
                     <span> Asia Cup QLF</span>
                   </div>
                 </a>
-              </div>
-              {/* ****************************************** */}
-              <hr style={{ width: "310px" }} />
+              </div> */}
+        {/* ****************************************** */}
+        {/* <hr style={{ width: "310px" }} />
               <a href="file:///home/rehana/Desktop/MasaiProject/LiveScore/liveScoreHome.html">
                 Desktop Scoreboard
               </a>
@@ -189,7 +216,7 @@ const Upcomming = () => {
               alt=""
             />
           </div>
-        </div>
+        </div> */}
       </div>
       {/* ********************************************************* */}
     </>
