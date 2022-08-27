@@ -7,6 +7,7 @@ import Livescore from "./Components/LiveScore/Livescore";
 import Mycarousal from "./Components/Mycarousal";
 
 import MainRouter from "./Pages/MainRouter";
+import Newss from "./Components/Newss";
 
 
 // import Sidebar from "./Components/Sidebar/Sidebar";
@@ -18,12 +19,17 @@ function App() {
     <div className="App">
 
 
+     
+
+
+
       <Mycarousal />
       <NavbarComponent />
     
       <Livescore />
 
        <MainRouter /> 
+
 
 
     </div>
