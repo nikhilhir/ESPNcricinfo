@@ -10,7 +10,7 @@ const Newss = () => {
     <Sidebar/>
    <div className="mainContainer" style={{
      /* booooooooooooooooorrrrrrrrrrDDDDeerrrrrrrrrrrrrrrrrrrrrrr */
-    border:"1px solid black",
+    // border:"1px solid black",
     display: "grid",
     gridTemplateColumns: "repeat(3,1fr)",
     gap: "20px",
@@ -22,7 +22,7 @@ const Newss = () => {
     <div className="innerContainer" style={{
         padding: "2px",
          /* booooooooooooooooorrrrrrrrrrDDDDeerrrrrrrrrrrrrrrrrrrrrrr */
-        border:"1px solid blue",
+        // border:"1px solid blue",
     }}>
     <div className={styles.News}>
      
@@ -292,7 +292,7 @@ const Newss = () => {
              width: "400px",
              marginLeft: "5px",
              marginTop: "30px",
-             border:"1px solid magenta"
+            //  border:"1px solid magenta"
              
             
            }}
@@ -376,19 +376,19 @@ const Newss = () => {
            </div>
 
            <div className={styles.h5}>
-             Each IPL game worth $15.11m in new bumber right deals
+             Each IPL game worth $15.11m in new bumber
            </div>
            <div className={styles.h5}>
              {" "}
-             196%, $950m-key Numbers from a record-breaking right auctions{" "}
+             196%, $950m-key Numbers from a record-breaking{" "}
            </div>
            <div className={styles.h5}>
-             "two and a half month IPL Window" from the next FTP- JAY SHAH
+             "two and a half month IPL Window" from the next FTP
            </div>
          </div>
        </a>
      </div>
-
+{/* neeeeeeeeeewwwwwwwwwwwwwwwww         ends here */}
      <div className={styles.first}>
        <a
          style={{
@@ -401,8 +401,10 @@ const Newss = () => {
        </a>
        <h6
          style={{
-           marginLeft: "70px",
+           marginLeft: "50px",
            marginTop: "-1px",
+           fontSize:"15px",
+           
          }}
        >
          3RD TEST, HEADINGLEY
@@ -415,14 +417,14 @@ const Newss = () => {
            
          }}
        ></h3>
-       <hr />
+       {/* <hr /> */}
        <a className={styles.ancer} href="">
          <div className={styles.container}>
            <div className={styles.james}>
-             <img
+             {/* <img
                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR127rwchtsq64FhlcpiVeASOl8MstTeYrQZg&usqp=CAU"
                alt=""
-             />
+             /> */}
            </div>
          </div>
        </a>{" "}
@@ -514,6 +516,9 @@ const Newss = () => {
          style={{
            display: "flex",
            justifyContent:"space-evenly",
+           width:"95%",
+           marginLeft:"65px",
+           
          }}
        >
          <div className={styles.div}>
@@ -521,8 +526,11 @@ const Newss = () => {
          </div>{" "}
          <div
            style={{
-             marginLeft: "40px",
-             width: "500px",
+            margin:"auto",
+            width: "400px",
+            marginLeft: "72px",
+            marginTop: "30px",
+            // border:"1px solid magenta"
            }}
          >
            Root rises to No. 1 in Tests; Imam moves past Kohli to No. 2 in ODIs
