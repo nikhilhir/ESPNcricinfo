@@ -1,4 +1,4 @@
-import { Box ,Stack,Text,Image,Center, Spacer} from '@chakra-ui/react'
+import { Box ,Stack,Text,Image, Spacer} from '@chakra-ui/react'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
