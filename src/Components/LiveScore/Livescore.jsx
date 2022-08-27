@@ -11,13 +11,14 @@ const Livescore = () => {
 
 
   // **************************************************************************************************
-  const API = "c430b1e6-8ab8-4018-8977-ed859b9b228a";
+  // const API = "c430b1e6-8ab8-4018-8977-ed859b9b228a";
+  //const API2 = "c430b1e6-8ab8-4018-8977-ed859b9b228a";
 
-  const { data } = useFetch(
-    `https://api.cricapi.com/v1/cricScore?apikey=${API}`
-  );
-   const liveData = data.data;
-   console.log("livedata",liveData)
+  // const { data } = useFetch(
+  //   `https://api.cricapi.com/v1/cricScore?apikey=${API}`
+  // );
+  //  const liveData = data.data;
+  //  console.log("livedata",liveData)
   //  **********************************************************************************************************
 
   //  useEffect(()=>{
@@ -25,7 +26,7 @@ const Livescore = () => {
   //  },[])
   return (
     <>
-      <h1> LiveScore</h1>
+    
       <div className={styles.container}>
         <div className={styles.nav}>
           <button
