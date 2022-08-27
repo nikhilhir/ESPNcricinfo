@@ -1,6 +1,17 @@
-import { MoonIcon } from "@chakra-ui/icons";
-import { Icon, Input } from "@chakra-ui/react";
-import React from "react";
+import { CheckIcon, MoonIcon } from "@chakra-ui/icons";
+import {
+  Icon,
+  Input,
+  InputGroup,
+  InputLeftElement,
+  InputRightElement,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
+  Stack,
+} from "@chakra-ui/react";
+import React, { useRef, useState } from "react";
 import { Navbar, Container, Nav, Button } from "react-bootstrap";
 import MainSubNavbar from "./NavbarItems/MainSubNavbar";
 import {
@@ -11,7 +22,10 @@ import {
 } from "react-icons/bs";
 import Example from "./NavbarItems/Edition";
 import Edition from "./NavbarItems/Edition";
-import Livescore from "../LiveScore/Livescore";
+
+import { FaSearch, FaArrowRight } from "react-icons/fa";
+import "../CSS/input0230.css";
+
 const NavbarComponent = () => {
   const NAV_ITEMS = [
     {
@@ -106,6 +120,7 @@ const NavbarComponent = () => {
     },
     {
       label: "News",
+      href: "#",
       children: [
         {
           label: "News Home",
@@ -133,11 +148,11 @@ const NavbarComponent = () => {
           href: "#",
         },
         {
-          label: "Australia Vs Zimbabwe",
+          label: "India Vs Pakistan",
           href: "#",
         },
         {
-          label: "Australia Vs Zimbabwe",
+          label: "Bangladesh Vs Sri Lanka",
           href: "#",
         },
       ],
@@ -214,6 +229,18 @@ const NavbarComponent = () => {
       ],
     },
   ];
+  const [status, setStatus] = useState(false);
+
+  const handleStatus = () => {
+    setStatus(!status);
+  };
+
+  const handlePrevious = () => {
+    setStatus(!status);
+  };
+
+  const ref = useRef();
+
   return (
     <Navbar variant="dark" sticky="top" style={{ backgroundColor: "#03a9f4" }}>
       <Container style={{ marginLeft: "10px" }}>
@@ -230,23 +257,83 @@ const NavbarComponent = () => {
           >
             <MainSubNavbar NAV_ITEMS={NAV_ITEMS} />
           </Nav.Link>
-          <Nav.Link
-            style={{
-              // border: "2px solid black",
-              display: "flex",
-              // justifyContent: "space-between",
-              width: "310px",
-              gap: "20px",
-              alignItems: "center",
-              color: "white",
-            }}
-          >
-            <BsFillMoonFill />
-            <BsBellFill />
-            <p>Language</p>
-            <BsFillGrid3X3GapFill />
-            <BsSearch />
-          </Nav.Link>
+
+          {status ? (
+            <Nav.Link className="search-box">
+              <Stack>
+                <InputGroup
+                  style={{ backgroundColor: "white", borderRadius: "10px" }}
+                >
+                  <InputLeftElement
+                    pointerEvents="none"
+                    color="gray.300"
+                    fontSize="1.2em"
+                    children={<BsSearch color="black" />}
+                  />
+                  <Input
+                    placeholder="Search Players, Teams"
+                    color="black"
+                    _placeholder={{ opacity: 1, color: "grey.500" }}
+                    // variant="unstyled"
+                    // p={2}
+                    ref={ref}
+                  />
+                  <InputRightElement
+                    children={
+                      <FaArrowRight color="black" onClick={handlePrevious} />
+                    }
+                  />
+                </InputGroup>
+              </Stack>
+            </Nav.Link>
+          ) : (
+            <Nav.Link
+              style={{
+                // border: "2px solid black",
+                display: "flex",
+                // justifyContent: "space-between",
+                width: "310px",
+                gap: "20px",
+                alignItems: "center",
+                color: "white",
+              }}
+            >
+              <BsFillMoonFill />
+              <BsBellFill />
+              <Menu>
+                <MenuButton
+                  style={{
+                    width: "110px",
+                    backgroundColor: "#03a9f4",
+                    border: "none",
+                    outline: "none",
+                    borderRadius: "1px",
+                  }}
+                >
+                  Language
+                </MenuButton>
+                <MenuList
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "10px",
+                    borderRadius: "none",
+                    borderRadius: "10px",
+                    padding: "10px",
+                  }}
+                >
+                  <MenuItem color="black" style={{ borderRadius: "1px" }}>
+                    English
+                  </MenuItem>
+                  <MenuItem color="black" style={{ borderRadius: "1px" }}>
+                    Hindi
+                  </MenuItem>
+                </MenuList>
+              </Menu>
+              <BsFillGrid3X3GapFill />
+              <BsSearch onClick={handleStatus} />
+            </Nav.Link>
+          )}
         </Nav>
       </Container>
     </Navbar>
