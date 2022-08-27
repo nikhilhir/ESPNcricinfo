@@ -1,12 +1,21 @@
 import "./App.css";
+import NavbarComponent from "./Components/fw17_0230/NavbarComponent";
 import Livescore from "./Components/LiveScore/Livescore";
+<<<<<<< HEAD
+import Mycarousal from "./Components/Mycarousal";
+import Sidebar from "./Components/Sidebar/Sidebar";
+import MainRouter from "./Pages/MainRouter";
+=======
 // import Sidebar from "./Components/Sidebar/Sidebar";
 
 // import MainRouter from "./Pages/MainRouter";
+>>>>>>> 07754c678aa8a37518c8e385a452f3454e67b8f5
 
 function App() {
   return (
     <div className="App">
+      <Mycarousal />
+      <NavbarComponent />
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
