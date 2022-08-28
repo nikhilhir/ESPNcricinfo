@@ -1,6 +1,6 @@
 # healthy-level-4386
 
-# ESPN news CLOne
+# ESPN news CLONE
 
 
 <h3> It is a sports news website exclusively for the game of cricket. The site features news, articles, live coverage of cricket matches , and StatsGuru, a database of historical matches and players from the 18th century to the present. </h3>
@@ -11,11 +11,11 @@ https://espnericinfo-healthy-level-4386.vercel.app/
 
 
 
-<h3>Run the following commands</h3>
+*<h3>Run the following commands</h3>
 
-<h4>npm install</h4>
-<h4>npm run server -> to start the json-server</h4>
-<h4>npm start</h4>
+*<h4>npm install</h4>
+*<h4>npm run server -> to start the json-server</h4>
+*<h4>npm start</h4>
 
 
 
