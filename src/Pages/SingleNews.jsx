@@ -59,7 +59,7 @@ const SingleNews = () => {
       <Box marginLeft="10%">
         <Box>
           <Stack direction="row">
-            <Box w="23%" h="800px" bg="white" borderRadius="10px">
+            <Box w="23%" h="800px" bg="white" borderRadius="10px" position="sticky" top="0px">
               <Box padding="15px 0px 15px 0px">
                 {news.slice(9, 10).map((e) => {
                   return (
@@ -91,7 +91,7 @@ const SingleNews = () => {
               <Spacer h="3" />
               <Image src="https://tpc.googlesyndication.com/simgad/1350654057507125249?" />
               <Spacer h="3" />
-              <Image src="https://secure-ds.serving-sys.com/resources/PROD/asset/144375/IMAGE/20220809/Rbi_ENG_2_300x250_8aug22_72879983665627947.jpg" />
+              {/* <Image src="https://secure-ds.serving-sys.com/resources/PROD/asset/144375/IMAGE/20220809/Rbi_ENG_2_300x250_8aug22_72879983665627947.jpg" /> */}
 
             </Box>
             <Box
@@ -242,7 +242,7 @@ const SingleNews = () => {
         </Box>
 
     </Box>
-    <Footer/>
+    {/* <Footer/> */}
 
      
 
