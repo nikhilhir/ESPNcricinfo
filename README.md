@@ -15,15 +15,19 @@ is a sports news website exclusively for the game of cricket.[4] The site featur
 
 
 * Live Matches Page: 
-* ![image](![Screenshot (128)](https://user-images.githubusercontent.com/97525857/187070237-90c5cc3e-e01e-44a8-82de-1ac30edd1607.png))
+* ![image](https://user-images.githubusercontent.com/97525857/187070237-90c5cc3e-e01e-44a8-82de-1ac30edd1607.png)
 
 
  
 * Upcoming Matches:
-* ![image](![Screenshot (129)](https://user-images.githubusercontent.com/97525857/187070315-99086aa2-3dee-4d1f-b0c5-8ee8ea5a61bf.png))
+* ![image](https://user-images.githubusercontent.com/97525857/187070315-99086aa2-3dee-4d1f-b0c5-8ee8ea5a61bf.png)
 
 
 
-* Product detail Page:
-* ![image](![Screenshot (130)](https://user-images.githubusercontent.com/97525857/187070397-1149d242-26fb-43bf-a982-c8e6b47a82b6.png))
+* Latest News Page:
+* ![image](https://user-images.githubusercontent.com/97525857/187070397-1149d242-26fb-43bf-a982-c8e6b47a82b6.png)
+
+
+* News detail Page:
+* ![image](https://user-images.githubusercontent.com/97525857/187070445-3c8d47e2-4ab1-439a-9bca-b41be88b80bf.png)
 
