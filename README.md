@@ -19,11 +19,11 @@ is a sports news website exclusively for the game of cricket.[4] The site featur
 
 
  
-* Brand Wise Product Page:
-* ![image](https://user-images.githubusercontent.com/99958902/180615366-b5bcd6d3-435e-4aad-9fda-a766e9a4884d.png)
+* Upcoming Matches:
+* ![image](![Screenshot (129)](https://user-images.githubusercontent.com/97525857/187070315-99086aa2-3dee-4d1f-b0c5-8ee8ea5a61bf.png))
 
 
 
 * Product detail Page:
-* ![image](https://user-images.githubusercontent.com/99958902/180615400-eccddbca-3559-46dc-aa29-1bf9320ab4af.png)
+* ![image](![Screenshot (130)](https://user-images.githubusercontent.com/97525857/187070397-1149d242-26fb-43bf-a982-c8e6b47a82b6.png))
 
