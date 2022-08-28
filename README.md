@@ -14,8 +14,8 @@ is a sports news website exclusively for the game of cricket.[4] The site featur
 * ![image](https://user-images.githubusercontent.com/97525857/187069582-fbf759dd-dff3-4446-bc5b-a3ecc03c3e89.png)
 
 
-* New Product Page: 
-* ![image](https://user-images.githubusercontent.com/99958902/180615351-8c814342-e45d-477c-a03a-c2cd7dc854c5.png)
+* Live Matches Page: 
+* ![image](https://user-images.githubusercontent.com/97525857/187069641-b4303d27-5a17-4b3e-99b2-a206044c5a28.png)
 
 
  
