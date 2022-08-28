@@ -3,7 +3,7 @@
 # ESPN news CLOne
 
 
-is a sports news website exclusively for the game of cricket.[4] The site features news, articles, live coverage of cricket matches (including liveblogs and scorecards), and StatsGuru, a database of historical matches and players from the 18th century to the present. As of March 2018, Sambit Bal was the editor.[5]
+<h3> It is a sports news website exclusively for the game of cricket. The site features news, articles, live coverage of cricket matches , and StatsGuru, a database of historical matches and players from the 18th century to the present. </h3>
 
 
 # Tech Stacks Used:
