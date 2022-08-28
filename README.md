@@ -11,7 +11,7 @@ is a sports news website exclusively for the game of cricket.[4] The site featur
 
 
 * HomePage:
-* ![image](![Screenshot (127)](https://user-images.githubusercontent.com/97525857/187069582-fbf759dd-dff3-4446-bc5b-a3ecc03c3e89.png))
+* ![image](https://user-images.githubusercontent.com/97525857/187069582-fbf759dd-dff3-4446-bc5b-a3ecc03c3e89.png)
 
 
 * New Product Page: 
