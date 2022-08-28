@@ -5,6 +5,10 @@
 
 <h3> It is a sports news website exclusively for the game of cricket. The site features news, articles, live coverage of cricket matches , and StatsGuru, a database of historical matches and players from the 18th century to the present. </h3>
 
+# ESPNcricinfo CLOne
+# Deploy Link
+
+
 
 # Tech Stacks Used:
 # ![image](https://user-images.githubusercontent.com/97446828/171631572-e1f0f81e-b026-47bf-a338-41c602dec12f.png)
