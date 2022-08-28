@@ -11,11 +11,10 @@ https://espnericinfo-healthy-level-4386.vercel.app/
 
 
 
-*<h3>Run the following commands</h3>
-
-*<h4>npm install</h4>
-*<h4>npm run server -> to start the json-server</h4>
-*<h4>npm start</h4>
+<h3>Run the following commands</h3>
+<h4>npm install</h4>
+<h4>npm run server -> to start the json-server</h4>
+<h4>npm start</h4>
 
 
 
